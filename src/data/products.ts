@@ -1,0 +1,435 @@
+import { Product, Review } from '@/types';
+
+export const PRODUCTS: Product[] = [
+  {
+    id: 'solitaire-diamond-ring',
+    name: 'Solitaire Diamond Engagement Ring',
+    tagline: '18K Yellow Gold with 1.25ct Radiant Diamond',
+    description:
+      'The quintessential symbol of commitment. A hand-selected 1.25-carat round brilliant diamond with exceptional fire and symmetry, raised on a polished 18K yellow gold band with hidden diamond collar.',
+    price: 185000,
+    originalPrice: 220000,
+    category: 'Rings',
+    material: '18K Yellow Gold',
+    gemstone: '1.25ct Round Brilliant Diamond (VVS1, E Color)',
+    images: [
+      '/images/solitaire_diamond_ring.jpg',
+      'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=1200&auto=format&fit=crop&q=85',
+    ],
+    sizes: ['5', '6', '7', '8', '9'],
+    colors: [
+      { name: 'Yellow Gold', hex: '#D4AF37' },
+      { name: 'Rose Gold', hex: '#E8A598' },
+      { name: 'Platinum', hex: '#E5E4E2' },
+    ],
+    isBestseller: true,
+    isNew: false,
+    inStock: true,
+    stockCount: 8,
+    rating: 5.0,
+    reviewsCount: 38,
+    specs: [
+      { label: 'Primary Gemstone', value: '1.25 Carat Natural Diamond' },
+      { label: 'Clarity & Color', value: 'VVS1 / E Color (Colorless)' },
+      { label: 'Precious Metal', value: 'Solid 18K Yellow Gold (750 Hallmarked)' },
+      { label: 'Band Width', value: '1.8 mm Comfort-Fit' },
+      { label: 'Certification', value: 'GIA Diamond Dossier & BIS Hallmark' },
+    ],
+    details: [
+      'Individually cast and handset by master jewelers',
+      'Conflict-free Kimberly Process certified natural diamond',
+      'Complimentary lifetime ultrasonic cleaning and resizing',
+      'Delivered in signature lacquer wood presentation box with certificate',
+    ],
+  },
+  {
+    id: 'rose-gold-eternity-band',
+    name: 'Rose Gold Diamond Eternity Band',
+    tagline: '18K Warm Rose Gold with Micro-Pavé Diamonds',
+    description:
+      'An endless circle of light. Handset micro-pavé diamonds completely encircle a slender 18K rose gold channel, designed to catch candlelight from every single angle.',
+    price: 94000,
+    originalPrice: 110000,
+    category: 'Rings',
+    material: '18K Rose Gold',
+    gemstone: '0.80ct Total Weight Pavé Diamonds',
+    images: [
+      '/images/rose_gold_eternity_band.jpg',
+      'https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?w=1200&auto=format&fit=crop&q=85',
+    ],
+    sizes: ['5', '5.5', '6', '6.5', '7', '7.5', '8'],
+    colors: [
+      { name: 'Rose Gold', hex: '#E8A598' },
+      { name: 'Yellow Gold', hex: '#D4AF37' },
+      { name: 'White Gold', hex: '#E5E4E2' },
+    ],
+    isBestseller: true,
+    isNew: true,
+    inStock: true,
+    stockCount: 12,
+    rating: 4.9,
+    reviewsCount: 24,
+    specs: [
+      { label: 'Total Carat Weight', value: '0.80 ctw Brilliant Cut Diamonds' },
+      { label: 'Diamond Quality', value: 'VS1 Clarity / F-G Color' },
+      { label: 'Precious Metal', value: '18K Rose Gold (750)' },
+      { label: 'Band Profile', value: '2.0 mm Eternity Setting' },
+    ],
+    details: [
+      'Flawlessly stacks beside engagement rings or wears solo as a bold statement',
+      'Polished inner rim engineered for daily comfort',
+      'Includes independent laboratory certification of authenticity',
+    ],
+  },
+  {
+    id: 'emerald-cut-sapphire-ring',
+    name: 'Emerald Cut Sapphire Ring',
+    tagline: 'Royal Ceylon Sapphire with Tapered Baguette Diamonds',
+    description:
+      'A deep velvet royal blue Ceylon sapphire framed by twin tapered diamond baguettes set in pure platinum. An aristocratic design evoking vintage royal courts.',
+    price: 165000,
+    category: 'Rings',
+    material: 'Platinum',
+    gemstone: '2.4ct Ceylon Blue Sapphire & Baguette Diamonds',
+    images: [
+      '/images/sapphire_ring.jpg',
+      'https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=1200&auto=format&fit=crop&q=85',
+    ],
+    sizes: ['6', '6.5', '7', '7.5', '8'],
+    colors: [{ name: 'Platinum', hex: '#E5E4E2' }],
+    isBestseller: false,
+    isNew: true,
+    inStock: true,
+    stockCount: 4,
+    rating: 5.0,
+    reviewsCount: 16,
+    specs: [
+      { label: 'Center Gemstone', value: '2.40ct Unheated Ceylon Sapphire' },
+      { label: 'Side Diamonds', value: '0.45ct Tapered Baguette Diamonds' },
+      { label: 'Mounting Metal', value: '950 Pure Platinum' },
+      { label: 'Origin', value: 'Ratnapura, Sri Lanka' },
+    ],
+    details: [
+      'Unheated sapphire certified by Gubelin & GIA',
+      'Heirloom quality intended for generational passing',
+      'Signature protective gallery setting',
+    ],
+  },
+  {
+    id: 'minimalist-gold-band',
+    name: 'Minimalist 18K Gold Sculpted Band',
+    tagline: 'Satin Brushed Solid Yellow Gold',
+    description:
+      'Refined simplicity. Hand-sculpted in heavy 18K yellow gold with a contemporary matte satin finish and bevelled high-shine edges.',
+    price: 36000,
+    originalPrice: 42000,
+    category: 'Rings',
+    material: '18K Yellow Gold',
+    images: [
+      '/images/minimalist_gold_band.jpg',
+      'https://images.unsplash.com/photo-1590548784585-643d2b9f2925?w=1200&auto=format&fit=crop&q=85',
+    ],
+    sizes: ['5', '6', '7', '8', '9', '10'],
+    colors: [
+      { name: 'Yellow Gold', hex: '#D4AF37' },
+      { name: 'Rose Gold', hex: '#E8A598' },
+    ],
+    isBestseller: true,
+    isNew: false,
+    inStock: true,
+    stockCount: 20,
+    rating: 4.8,
+    reviewsCount: 52,
+    specs: [
+      { label: 'Precious Metal', value: 'Solid 18K Yellow Gold' },
+      { label: 'Band Width', value: '3.0 mm' },
+      { label: 'Finish', value: 'Dual Satin Brushed with Mirror Edges' },
+      { label: 'Total Weight', value: '5.2 grams' },
+    ],
+    details: [
+      'Substantial weight and luxurious hand-feel',
+      'Resistant to scratches through special hardening technique',
+      'Designed for effortless daily luxury wear',
+    ],
+  },
+  {
+    id: 'pearl-diamond-pendant-necklace',
+    name: 'Celestial Pearl & Diamond Pendant Necklace',
+    tagline: 'South Sea Cultured Pearl on 18K White Gold Chain',
+    description:
+      'Suspended like a drop of moonlight. A luminous 11mm Australian South Sea cultured pearl adorned with a sparkling diamond constellation cap on an adjustable cable chain.',
+    price: 88000,
+    originalPrice: 98000,
+    category: 'Necklaces',
+    material: '18K White Gold',
+    gemstone: '11mm South Sea Pearl & 0.25ct Diamonds',
+    images: [
+      '/images/pearl_diamond_pendant.jpg',
+      'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=1200&auto=format&fit=crop&q=85',
+    ],
+    sizes: ['16 inch', '18 inch'],
+    colors: [
+      { name: 'White Gold', hex: '#E5E4E2' },
+      { name: 'Yellow Gold', hex: '#D4AF37' },
+    ],
+    isBestseller: true,
+    isNew: true,
+    inStock: true,
+    stockCount: 7,
+    rating: 4.9,
+    reviewsCount: 41,
+    specs: [
+      { label: 'Cultured Pearl', value: '11mm AAA Australian South Sea Pearl' },
+      { label: 'Pearl Luster', value: 'Deep Mirror Luster, Flawless Surface' },
+      { label: 'Accent Diamonds', value: '0.25ct Brilliant Cut Diamonds' },
+      { label: 'Chain Length', value: '18 inches with 16-inch sizing loop' },
+    ],
+    details: [
+      'Ethically harvested from sustainable oyster habitats',
+      'Spring lobster clasp engraved with maker’s crest',
+      'Packaged with velvet travel pouch and cleaning chamois',
+    ],
+  },
+  {
+    id: 'akoya-pearl-strand-necklace',
+    name: 'Classic Akoya Cultured Pearl Strand Necklace',
+    tagline: 'Graduated Japanese Akoya Pearls with 18K Gold Clasp',
+    description:
+      'The timeless standard of elegance. Hand-knotted with pure silk thread, each perfectly spherical Japanese Akoya pearl reflects brilliant rose overtones.',
+    price: 145000,
+    category: 'Necklaces',
+    material: '18K Yellow Gold',
+    gemstone: '7.5 - 8.0mm Japanese Akoya Pearls',
+    images: [
+      '/images/akoya_pearl_necklace.jpg',
+      '/images/pearl_diamond_pendant.jpg',
+    ],
+    sizes: ['18 inch Princess', '20 inch Matinee'],
+    isBestseller: false,
+    isNew: false,
+    inStock: true,
+    stockCount: 5,
+    rating: 5.0,
+    reviewsCount: 29,
+    specs: [
+      { label: 'Pearl Grade', value: 'Hanadama Equivalent (Top 1%)' },
+      { label: 'Pearl Diameter', value: '7.5mm - 8.0mm' },
+      { label: 'Clasp Mechanism', value: 'Safety Filigree Clasp in 18K Yellow Gold' },
+      { label: 'Stringing', value: 'Double Knotted Silk' },
+    ],
+    details: [
+      'Hand-matched for uniform luster, hue, and surface smoothness',
+      'Includes Gem Science International (GSI) pearl grading report',
+    ],
+  },
+  {
+    id: 'emerald-halo-necklace',
+    name: 'Colombian Emerald Halo Necklace',
+    tagline: 'Vivid Green Muzo Emerald with Brilliant Diamond Halo',
+    description:
+      'A vivid green Colombian emerald encircled by sparkling brilliant-cut diamonds, suspended from a delicate diamond-accented bail in rich 18K yellow gold.',
+    price: 132000,
+    originalPrice: 155000,
+    category: 'Necklaces',
+    material: '18K Yellow Gold',
+    gemstone: '1.8ct Colombian Emerald & 0.40ct Diamonds',
+    images: [
+      '/images/emerald_halo_necklace.jpg',
+      'https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=1200&auto=format&fit=crop&q=85',
+    ],
+    sizes: ['16-18 inch adjustable'],
+    isBestseller: true,
+    isNew: true,
+    inStock: true,
+    stockCount: 6,
+    rating: 4.9,
+    reviewsCount: 19,
+    specs: [
+      { label: 'Center Gemstone', value: '1.80ct Octagonal Colombian Emerald' },
+      { label: 'Halo Diamonds', value: '0.40ct F/VS Natural Diamonds' },
+      { label: 'Precious Metal', value: '18K Yellow Gold (750)' },
+    ],
+    details: [
+      'Sourced ethically from the celebrated Muzo mines',
+      'Accompanied by Gubelin Gemological Report',
+    ],
+  },
+  {
+    id: 'golden-filigree-drop-earrings',
+    name: 'Golden Filigree Drop Earrings',
+    tagline: '22K Hand-Pierced Royal Chandeliers',
+    description:
+      'Weightless movement with regal presence. Delicately hand-pierced 22K yellow gold filigree drops inspired by Mughal court heritage, finished with micro-granulation.',
+    price: 68000,
+    originalPrice: 79000,
+    category: 'Earrings',
+    material: '22K Gold',
+    images: [
+      '/images/golden_filigree_earrings.jpg',
+      'https://images.unsplash.com/photo-1635767798638-3e25273a8236?w=1200&auto=format&fit=crop&q=85',
+    ],
+    colors: [{ name: '22K Yellow Gold', hex: '#E5C158' }],
+    isBestseller: true,
+    isNew: false,
+    inStock: true,
+    stockCount: 11,
+    rating: 4.8,
+    reviewsCount: 34,
+    specs: [
+      { label: 'Purity', value: '22 Karat (916 BIS Hallmarked)' },
+      { label: 'Weight', value: '9.4 grams pair' },
+      { label: 'Drop Length', value: '42 mm' },
+      { label: 'Closure', value: 'Secure Push-Back with Omega Clip' },
+    ],
+    details: [
+      'Entirely handcrafted by generational artisans in Rajasthan',
+      'Hypoallergenic solid gold posts',
+    ],
+  },
+  {
+    id: 'diamond-stud-earrings',
+    name: 'Brilliant Cut Diamond Stud Earrings',
+    tagline: 'Matching 1.0ct Total Weight Platinum Studs',
+    description:
+      'The foundation of every fine jewelry collection. Perfectly matched half-carat round brilliant diamonds secured in four-prong platinum basket settings.',
+    price: 115000,
+    category: 'Earrings',
+    material: 'Platinum',
+    gemstone: '1.00ct Total Weight Diamonds (0.50ct each)',
+    images: [
+      '/images/diamond_stud_earrings.jpg',
+      'https://images.unsplash.com/photo-1630019852942-f89202989a59?w=1200&auto=format&fit=crop&q=85',
+    ],
+    colors: [
+      { name: 'Platinum', hex: '#E5E4E2' },
+      { name: 'Yellow Gold', hex: '#D4AF37' },
+      { name: 'Rose Gold', hex: '#E8A598' },
+    ],
+    isBestseller: true,
+    isNew: false,
+    inStock: true,
+    stockCount: 14,
+    rating: 5.0,
+    reviewsCount: 47,
+    specs: [
+      { label: 'Diamond Carat', value: '1.00 ctw (0.50 ct each ear)' },
+      { label: 'Color & Clarity', value: 'F Color / VS1 Clarity' },
+      { label: 'Metal', value: '950 Platinum' },
+      { label: 'Backing', value: 'Threaded Screw-Back for Ultimate Security' },
+    ],
+    details: [
+      'Double GIA certificates included for both diamonds',
+      'Engineered to sit flat and flush against the earlobe',
+    ],
+  },
+  {
+    id: 'diamond-tennis-bracelet',
+    name: 'Classic Diamond Tennis Bracelet',
+    tagline: '3.0ct Total Weight Continuous Diamond Line',
+    description:
+      'A fluid ribbon of scintillation. Fifty-two matched brilliant-cut diamonds articulated in four-prong 18K white gold links with an invisible double-safety clasp.',
+    price: 195000,
+    originalPrice: 235000,
+    category: 'Bracelets',
+    material: '18K White Gold',
+    gemstone: '3.00ct Total Weight Natural Diamonds',
+    images: [
+      '/images/diamond_tennis_bracelet.jpg',
+      'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=1200&auto=format&fit=crop&q=85',
+    ],
+    sizes: ['6.5 inch', '7.0 inch', '7.5 inch'],
+    colors: [
+      { name: 'White Gold', hex: '#E5E4E2' },
+      { name: 'Yellow Gold', hex: '#D4AF37' },
+      { name: 'Rose Gold', hex: '#E8A598' },
+    ],
+    isBestseller: true,
+    isNew: true,
+    inStock: true,
+    stockCount: 6,
+    rating: 5.0,
+    reviewsCount: 31,
+    specs: [
+      { label: 'Total Diamond Weight', value: '3.00 Carats Total Weight' },
+      { label: 'Number of Diamonds', value: '52 Round Brilliant Cut' },
+      { label: 'Precious Metal', value: '18K White Gold (750)' },
+      { label: 'Clasp Mechanism', value: 'Concealed Box Clasp with Dual Figure-8 Latches' },
+    ],
+    details: [
+      'Individual flexible links engineered to drape fluidly without flipping',
+      'Independently appraised and hallmarked',
+    ],
+  },
+  {
+    id: 'sculpted-gold-bangle-bracelet',
+    name: 'Sculpted 18K Gold Bangle Bracelet',
+    tagline: 'Solid Oval Hinged Bangle with Mirror Polish',
+    description:
+      'Understated architectural luxury. An ergonomic oval silhouette contoured to mirror the natural anatomy of the wrist, finished with an integrated push-button clasp.',
+    price: 82000,
+    originalPrice: 95000,
+    category: 'Bracelets',
+    material: '18K Yellow Gold',
+    images: [
+      '/images/sculpted_gold_bangle.jpg',
+      'https://images.unsplash.com/photo-1629224316810-9d8805b95e76?w=1200&auto=format&fit=crop&q=85',
+    ],
+    sizes: ['Small (16 cm)', 'Medium (17.5 cm)', 'Large (19 cm)'],
+    colors: [
+      { name: 'Yellow Gold', hex: '#D4AF37' },
+      { name: 'Rose Gold', hex: '#E8A598' },
+    ],
+    isBestseller: false,
+    isNew: false,
+    inStock: true,
+    stockCount: 9,
+    rating: 4.8,
+    reviewsCount: 22,
+    specs: [
+      { label: 'Precious Metal', value: 'Solid 18K Yellow Gold (750)' },
+      { label: 'Profile Width', value: '4.5 mm Oval Tubular' },
+      { label: 'Weight', value: '14.8 grams' },
+    ],
+    details: [
+      'Invisible precision hinge mechanism',
+      'Subtle interior engraving of the Lumière maison seal',
+    ],
+  },
+];
+
+export const REVIEWS_DATA: Record<string, Review[]> = {
+  'solitaire-diamond-ring': [
+    {
+      id: 'rev-1',
+      author: 'Priya Singhania',
+      rating: 5,
+      date: 'September 2026',
+      title: 'Breathtaking Brilliance and Craftsmanship',
+      comment:
+        'My fiancé proposed with this solitaire and I was left speechless. The diamond captures the light with mesmerizing fire. The yellow gold setting has such a rich, royal warmth.',
+      verified: true,
+    },
+    {
+      id: 'rev-2',
+      author: 'Vikram Mehta',
+      rating: 5,
+      date: 'August 2026',
+      title: 'Flawless Concierge & Packaging',
+      comment:
+        'Purchased for our 10th anniversary. The presentation box, the GIA documentation, and the customer assistance via WhatsApp were second to none. Truly Cartier-level experience.',
+      verified: true,
+    },
+  ],
+};
+
+export function getProductById(id: string): Product | undefined {
+  return PRODUCTS.find((p) => p.id === id);
+}
+
+export function getRelatedProducts(category: string, currentId: string): Product[] {
+  const matches = PRODUCTS.filter((p) => p.category === category && p.id !== currentId);
+  if (matches.length >= 3) return matches.slice(0, 4);
+  return PRODUCTS.filter((p) => p.id !== currentId).slice(0, 4);
+}
+
+export const products = PRODUCTS;

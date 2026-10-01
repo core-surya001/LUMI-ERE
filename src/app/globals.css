@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light Mode (Cartier / Tiffany Inspired Luxury) */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #FBF9F5;
+  --bg-card: #FFFFFF;
+  --bg-surface: #F5F1E9;
+  --text-primary: #121212;
+  --text-secondary: #5A5752;
+  --text-muted: #8E8A83;
+  --accent-gold: #C9A646;
+  --accent-gold-soft: #D8B75B;
+  --accent-gold-dark: #A6822B;
+  --border-light: rgba(201, 166, 70, 0.22);
+  --border-subtle: rgba(18, 18, 18, 0.08);
+  --shadow-luxury: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+}
+
+.dark,
+[data-theme='dark'] {
+  /* Dark Mode (High-End Velvet Obsidian & Soft Gold) */
+  --bg-primary: #0A0A0A;
+  --bg-secondary: #121212;
+  --bg-card: #141414;
+  --bg-surface: #1A1A1A;
+  --text-primary: #F8F6F0;
+  --text-secondary: #B8B4AA;
+  --text-muted: #706C64;
+  --accent-gold: #C9A646;
+  --accent-gold-soft: #D4AF37;
+  --accent-gold-dark: #9E7D28;
+  --border-light: rgba(201, 166, 70, 0.28);
+  --border-subtle: rgba(248, 246, 240, 0.08);
+  --shadow-luxury: 0 16px 45px -10px rgba(0, 0, 0, 0.6);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Headings */
+h1, h2, h3, h4, .font-serif {
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+  letter-spacing: 0.03em;
+}
+
+/* Luxury Container */
+.container-luxury {
+  width: 100%;
+  max-width: 1360px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-luxury {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* Luxury Gold Button */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent-gold);
+  color: #0A0A0A;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 0.95rem 2.25rem;
+  border: 1px solid var(--accent-gold);
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gold:hover {
+  background-color: var(--accent-gold-soft);
+  border-color: var(--accent-gold-soft);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(201, 166, 70, 0.25);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 0.95rem 2.25rem;
+  border: 1px solid var(--border-light);
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.btn-outline:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  background-color: rgba(201, 166, 70, 0.05);
+}
+
+/* WhatsApp Luxury Button */
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  background-color: #128C7E;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.95rem 2rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background-color: #075E54;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(18, 140, 126, 0.3);
+}
+
+/* Minimal Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-light);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-gold);
+}
